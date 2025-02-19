@@ -1,0 +1,11 @@
+N = int(input())
+scores = []
+
+for _ in range(N):
+    scores.append(int(input()))
+
+scores.sort(reverse = True)
+scores = scores[scores.count(max(scores)):]
+scores = scores[scores.count(max(scores)):]
+
+print(f"{max(scores)} {scores.count(max(scores))}")
